@@ -8,8 +8,7 @@ function namedAssetImportPlugin({ types: t }) {
   function generateNewSourcePath(loaderMap, moduleName, sourcePath) {
     const ext = extname(sourcePath).substr(1);
     const extMap = loaderMap[ext];
-    return extMap[moduleName]
-      ? extMap[moduleName].replace(/\[path\]/, sourcePath)
+    return extMap[moduleName]? extMap[moduleName].replace(/\[path\]/, sourcePath)
       : sourcePath;
   }
 
